@@ -10,6 +10,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.weatherapp.ui.screens.HomeScreen
+import com.example.weatherapp.ui.theme.PrimaryBackground
 import com.example.weatherapp.ui.theme.WeatherAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,9 +22,9 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
+                    color = PrimaryBackground
                 ) {
-                    Greeting("Android")
+                    HomeScreen()
                 }
             }
         }
@@ -41,6 +43,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     WeatherAppTheme {
-        Greeting("Android")
+        HomeScreen()
     }
 }
